@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 100;
+    
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-around;
+}
+#home {
+    height: 100vh;
+    background-color: rgb(246, 246, 246);
+    overflow-x: hidden;
+}
+.box-1 {
+    margin-left: 7%;
+}
+.box-2 {
+    width: 50%;
+    margin-left: 10%;
+}
+.dc {
+    width: 100%;
+    margin-left: 10%;
+    margin-top: 35vh;
+}
+.dcs{
+    display: none;
+}
+.header {
+    margin-top: 30vh;
+    font-size: 5vw;
+}
+.sub-text {
+    margin-top: 1vh;
+}
+.order {
+    font-size: 100%;
+    padding: 2% 5% 2% 5%;
+    border: none;
+    border-radius: 200px;
+    color: white;
+    background-color: rgba(55, 55, 55, 0.988);
+    margin-top: 2vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 9vh;
+    background-color: rgba(55, 55, 55, 0.988);
+    position: fixed; 
+    top: 0; 
+    width: 101%;
+    z-index: 999;
+    
+}
+.logo {
+    color: rgb(247, 247, 247);
+    font-size: 3vh;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+}
+.nav-links a{
+    color: rgb(247, 247, 247);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 2.3vh;
+}
+.nav-links li{
+    list-style: none;
+}
+.burger{
+    display: none;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(232, 232, 232);
+    margin: 5px;
+}
+
+
+
+
+@media screen and (max-width:1025px) {
+    .container1 {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .header {
+        font-size: 120px;
+    }
+    .sub-text {
+        font-size: 100px;
+    }
+    .dc {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:960px){
+    
+    .nav-links {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:768px){
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 9vh;
+        background-color: rgba(55, 55, 55, 0.988);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        
+    }
+    .nav-links li {
+        opacity: 0;
+        
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+
+
+.nav-active {
+    transform: translateX(0%);
+}
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
